@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sara Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body >
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="#">SARA</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#about-section">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#portfolio-section">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    
+    <section class="container pt-5 hero-section">
+      <div class="row align-items-center pt-3 mt-3">
+        <!-- Left Column: Text -->
+        <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+          <h1 class="hero-heading"> 
+            PERSONALIZED <br/>
+            GRAPHIC DESIGN AND <br/>
+            BRANDING <br
+          </h1>
+         
+            
+          <p class="hero-subheading">
+            Let me help you with your next creative project <br/>
+          </p>
+          <a href="#" class="btn learn-more-btn mt-3">LEARN MORE</a>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="col-md-6 text-center">
+          <img src="./assets/image sara png.png"
+               alt="Professional woman with MacBook"
+               class="img-fluid" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section py-5" id="about-section">
+        <div class="container">
+          <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6 position-relative mb-5">
+              <div class="image-stack">
+                <img src="./assets/Sara perro.jpeg"
+                     class="main-img img-fluid shadow-sm"
+                     alt="Main portrait" />
+                <img src="./assets/IMG_0488.jpeg"
+                     class="overlap-img img-fluid shadow-sm"
+                     alt="Overlapping portrait" />
+              </div>
+            </div>
+      
+            <!-- Right Column -->
+            <div class="col-md-6 d-flex flex-column">
+              <div class="bio-card p-4 mb-4">
+                <h2 class="about-title">MEET SARA</h2>
+                <h5 class="about-subtitle">Graphic Designer</h5>
+                <p class="about-description mt-3">
+                  Fashionista and Graphic Designer
+                </p>
+              </div>
+              <p class="about-paragraph">
+                My diploma in Graphic Design for Print and Web from Humber College, along with my degree in Fashion Design and Marketing, has equipped me with a deep understanding of branding, advertising, and packaging. I am proficient in Adobe Photoshop, Illustrator, and InDesign, and I thrive on crafting compelling visuals that connect with audiences.
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section class="portfolio-section" id="portfolio-section">
+  
+        <div class="gallery-container">
+            <h2 class="portfolio-title">MY WORK</h2>
+            <div class="gallery-wrapper" id="galleryWrapper">
+            </div>
+            
+            <button class="gallery-control prev" id="prevBtn">&#10094;</button>
+            <button class="gallery-control next" id="nextBtn">&#10095;</button>
+            
+            <div class="gallery-indicators" id="indicators">
+            <!-- indicators were added with javascript -->
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

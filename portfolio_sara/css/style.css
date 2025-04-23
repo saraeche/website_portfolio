@@ -1,0 +1,373 @@
+:root {
+  --bg-main: #EFE7DE;
+  --bg-dark: #525E66;
+  --accent: #D6C6A6;
+  --text-light: #ffffff;
+  --text-dark: #1A1A1A;
+  --text-muted: #5F5F5F;
+  --text-card: #2C2C2C;
+  --border-card: #DDD1B5;
+  --highlight: #C5B89B;
+  --highlight-muted: #AAA8A6;
+
+  --font-primary: 'Lora', serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--bg-main);
+}
+
+.logo-text {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.navbar {
+  background-color: var(--bg-dark);
+  min-height: 12vh;
+}
+
+.nav-link-custom {
+  font-family: var(--font-primary);
+  color: var(--text-light);
+  font-size: 18px;
+  margin-left: 25px;
+  text-transform: capitalize;
+}
+
+.nav-link-custom:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.hero-section {
+  background-color: var(--bg-main);
+}
+
+.hero-heading {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.hero-subheading {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.learn-more-btn {
+  background-color: #525E66;
+  color: var(--accent);
+  padding: 10px 24px;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--accent);
+  color: #000;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-section {
+  background-color: #F9F7F4;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.image-stack {
+  position: relative;
+  width: fit-content;
+  margin-left: 20px;
+}
+
+.main-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 6px;
+}
+
+.overlap-img {
+  position: absolute;
+  width: 60%;
+  bottom: -130px;
+  right: -40px;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bio-card {
+  border: 3px solid var(--border-card);
+  padding: 2rem;
+  margin-top: 40px;
+}
+
+.about-title {
+  font-family: var(--font-primary);
+  color: var(--highlight);
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-subtitle {
+  font-family: 'Cinzel Decorative', cursive;
+  font-style: italic;
+  color: var(--highlight-muted);
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+.about-description {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text-card);
+  line-height: 1.6;
+}
+
+.about-paragraph {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  color: var(--text-card);
+  line-height: 1.8;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .image-stack {
+    margin: 0 auto;
+  }
+
+  .main-img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .overlap-img {
+    position: static;
+    margin: 1.5rem auto 0;
+    display: block;
+    width: 60%;
+  }
+
+  .bio-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .about-subtitle,
+  .about-description,
+  .about-paragraph {
+    text-align: center;
+  }
+
+  .about-paragraph {
+    font-size: 15px;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+}
+
+.portfolio-section {
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 600px;
+  position: relative;
+}
+
+.gallery-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform-origin: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item.center {
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 10;
+  opacity: 1;
+}
+
+.gallery-item.left {
+  transform: translate(-120%, -50%) scale(0.7);
+  z-index: 5;
+  opacity: 0.7;
+}
+
+.gallery-item.right {
+  transform: translate(20%, -50%) scale(0.7);
+  z-index: 5;
+  opacity: 0.7;
+}
+
+.gallery-item.far-left {
+  transform: translate(-150%, -50%) scale(0.5);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.gallery-item.far-right {
+  transform: translate(50%, -50%) scale(0.5);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.gallery-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: background-color 0.3s;
+}
+
+.gallery-control:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.gallery-control.prev {
+  left: 50px;
+}
+
+.gallery-control.next {
+  right: 50px;
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-info {
+  opacity: 1;
+}
+
+.gallery-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.gallery-description {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.gallery-indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gallery-indicator.active {
+  background-color: white;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent);
+  padding: 0 1rem;
+  z-index: 3;
+}
